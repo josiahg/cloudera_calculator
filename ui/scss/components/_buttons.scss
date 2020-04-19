@@ -1,0 +1,135 @@
+@each $color, $value in $theme-colors-dark {
+  .btn-#{$color}-dark {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors-dark {
+  .btn-outline-#{$color}-dark {
+    @include button-outline-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors-accessible {
+  .btn-#{$color}-accessible {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors-accessible {
+  .btn-outline-#{$color}-accessible {
+    @include button-outline-variant($value);
+  }
+}
+
+.btn {
+
+  &.btn-primary {
+    border-color: theme-color("primary");
+    color: color("white");
+  }
+
+  &.btn-secondary {
+    @extend .btn-outline-primary;
+    background-color: transparent;
+  }
+
+  &.btn-default {
+    @extend .btn-outline-default;
+    background-color: transparent;
+  }
+
+  &.btn-link {
+    border-color: transparent;
+    color: $link-color;
+  }
+
+  + .btn:not(.btn-link) {
+    margin-left: 10px - $inline-element-spacing;
+  }
+}
+
+.btn-group,
+.btn-group-vertical {
+
+  .btn,
+  .btn-group {
+
+    + .btn:not(.btn-link) {
+      margin-left: -$btn-border-width;
+    }
+  }
+}
+
+.palette-dark {
+
+  .btn {
+
+    &.btn-primary {
+      background-color: theme-color-dark("primary");
+      border-color: theme-color-dark("primary");
+      color: color-dark("white");
+    }
+
+    &.btn-secondary {
+      @extend .btn-outline-primary-dark;
+    }
+
+    &.btn-default {
+      @extend .btn-outline-default-dark;
+    }
+
+    &.btn-link {
+      color: $link-color-dark;
+    }
+  }
+
+  .btn-link {
+    color: $link-color-dark;
+
+    @include hover {
+      color: $link-hover-color-dark;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: $btn-link-disabled-color-dark;
+    }
+  }
+}
+
+.palette-accessible {
+
+  .btn {
+
+    &.btn-primary {
+      border-color: theme-color-accessible("primary");
+      color: color-accessible("white");
+    }
+
+    &.btn-secondary {
+      @extend .btn-outline-primary-accessible;
+    }
+
+    &.btn-default {
+      @extend .btn-outline-default-accessible;
+    }
+
+    &.btn-link {
+      color: $link-color-accessible;
+    }
+  }
+
+  .btn-link {
+    color: $link-color-accessible;
+
+    @include hover {
+      color: $link-hover-color-accessible;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: $btn-link-disabled-color-accessible;
+    }
+  }
+}

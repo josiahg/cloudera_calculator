@@ -1,0 +1,127 @@
+.card {
+
+  &:not([class*="bg-"]) {
+
+    .card-header {
+      color: $text-light;
+    }
+
+    // stylelint-disable selector-list-comma-newline-after
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: $text-light;
+    }
+    // stylelint-enable
+  }
+}
+
+.card-header {
+  background-color: inherit;
+  border-bottom: $border-width $border-color-default solid;
+}
+
+.card-footer {
+  background-color: inherit;
+  border-top: none;
+}
+
+.card-body {
+  background-color: inherit;
+  border-radius: inherit;
+
+  > .container,
+  > .container-fluid {
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+    width: auto;
+  }
+
+  + .card-footer {
+    padding-top: 0;
+  }
+}
+
+.card-subtitle {
+  margin-bottom: $card-spacer-y / 2;
+  margin-top: 0;
+}
+
+.card-header-tabs,
+.card-header-pills {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card-group {
+
+  .card {
+    border-left-width: $border-width;
+    border-right-width: $border-width;
+  }
+}
+
+.palette-dark {
+
+  .card {
+    background-color: $card-bg-dark;
+    border-color: $card-border-color-dark;
+
+    &:not([class*="bg-"]) {
+
+      .card-header {
+        color: text-color-dark("light");
+      }
+
+      // stylelint-disable selector-list-comma-newline-after
+      h1, h2, h3, h4, h5, h6,
+      .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: text-color-dark("light");
+      }
+      // stylelint-enable
+    }
+  }
+
+  .card-body {
+    color: $card-color-dark;
+  }
+
+  .card-header {
+    border-bottom-color: $card-border-color-dark;
+    color: $card-cap-color-dark;
+  }
+}
+
+.palette-accessible {
+
+  .card {
+    background-color: $card-bg-accessible;
+    border-color: $card-border-color-accessible;
+
+    &:not([class*="bg-"]) {
+
+      .card-header {
+        color: text-color-accessible("light");
+      }
+
+      // stylelint-disable selector-list-comma-newline-after
+      h1, h2, h3, h4, h5, h6,
+      .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: text-color-accessible("light");
+      }
+      // stylelint-enable
+    }
+  }
+
+  .card-body {
+    color: $card-color-accessible;
+  }
+
+  .card-header {
+    border-bottom-color: $card-border-color-accessible;
+    color: $card-cap-color-accessible;
+  }
+}
+
+.card-columns {
+  margin-bottom: -$grid-gutter-width;
+}

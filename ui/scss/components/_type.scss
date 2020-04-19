@@ -1,0 +1,51 @@
+// stylelint-disable selector-list-comma-newline-after, declaration-no-important
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+  font-weight: $headings-font-weight-light;
+}
+
+.text-base {
+  font-size: $font-size-base !important;
+}
+
+.text-large {
+  font-size: $font-size-lg !important;
+}
+
+.text-small {
+  font-size: $font-size-sm !important;
+}
+
+.palette-dark {
+
+  hr {
+    border-top-color: $hr-border-color-dark;
+  }
+
+  .blockquote-footer {
+    color: $blockquote-small-color-dark;
+  }
+}
+
+.palette-accessible {
+
+  hr {
+    border-top-color: $hr-border-color-accessible;
+  }
+
+  .blockquote-footer {
+    color: $blockquote-small-color-accessible;
+  }
+}

@@ -1,0 +1,241 @@
+// stylelint-disable selector-max-compound-selectors, selector-max-class
+
+.wizard {
+
+  .navbar-primary {
+    background-color: inherit;
+    background-image: none;
+    float: left;
+    margin-right: $grid-gutter-width / -2;
+    padding-right: $grid-gutter-width;
+    position: static;
+    width: $wizard-navbar-width;
+  }
+
+  .wizard-body {
+    border-left: $border-width solid $border-color-default;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+
+    .navbar-wizard {
+      margin-left: $grid-gutter-width;
+      margin-top: auto;
+      padding: 0;
+
+      .wizard-next-button {
+        margin-left: auto;
+
+        // test for IE
+        @media screen\0 {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.wizard-fullpage {
+
+  .navbar-header {
+    background-color: bg-color("light");
+    height: $wizard-navbar-height;
+    margin-left: 0;
+    padding: $wizard-padding-y $wizard-padding-x;
+  }
+
+  .wizard-header {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  .wizard-body {
+    margin-left: $wizard-navbar-width;
+    margin-top: $wizard-navbar-height;
+    padding-bottom: $wizard-padding-x;
+    padding-left: $wizard-padding-x;
+    padding-right: $wizard-padding-x;
+    padding-top: $wizard-padding-x;
+
+    > .container,
+    > .container-fluid {
+      padding: 0;
+    }
+  }
+
+  .navbar-primary {
+    background-image: none;
+    height: calc(100% - (#{$wizard-navbar-height} - #{$border-width}) * 2);
+    margin-bottom: $wizard-navbar-height;
+    padding: $wizard-padding-x;
+    top: calc(#{$wizard-navbar-height} - #{$border-width});
+    width: $wizard-navbar-width;
+    z-index: 1040;
+  }
+
+  .navbar-footer {
+    margin-bottom: $wizard-navbar-height;
+    margin-left: $wizard-navbar-width;
+    padding: $wizard-padding-x;
+  }
+
+  .navbar-wizard {
+    background-color: bg-color("light");
+    border-top: $border-width $body-bg solid;
+    height: $wizard-navbar-height;
+    justify-content: flex-end;
+    min-width: $layout-min-width;
+    padding: $wizard-padding-y $wizard-padding-x;
+  }
+
+  .btn {
+    min-width: $wizard-btn-min-width;
+  }
+
+  .wizard-cancel-button {
+    margin-right: auto;
+
+    // test for IE
+    @media screen\0 {
+      margin-right: 0;
+    }
+  }
+
+  &.modal {
+
+    > .modal-dialog > .modal-content {
+      > .modal-header {
+        border-bottom: $border-width $body-bg solid;
+        height: $wizard-navbar-height;
+        padding: $wizard-padding-y $wizard-padding-x;
+
+        .modal-title {
+          @extend .h1;
+        }
+      }
+
+      > .modal-body {
+        background-color: bg-color("default");
+        color: inherit;
+        max-height: 75vh;
+        overflow: auto;
+        padding: $wizard-padding-x;
+      }
+
+      > .modal-footer {
+        border-top: $border-width $body-bg solid;
+        height: $wizard-navbar-height;
+        padding: $wizard-padding-y $wizard-padding-x;
+      }
+    }
+
+    .navbar-primary {
+      left: 0;
+      position: fixed;
+
+      // test for IE
+      @media screen\0 {
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      ~ * {
+        margin-left: $wizard-navbar-width;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.palette-dark {
+
+  .wizard {
+
+    .navbar-primary {
+      background-color: inherit;
+    }
+
+    .wizard-body {
+      border-left-color: $border-color-default-dark;
+    }
+  }
+
+  .wizard-fullpage,
+  &.wizard-fullpage {
+
+    .navbar-header {
+      background-color: bg-color-dark("light");
+    }
+
+    .navbar-wizard {
+      background-color: bg-color-dark("light");
+      border-top-color: $body-bg-dark;
+    }
+
+    &.modal {
+
+      > .modal-dialog > .modal-content {
+
+        > .modal-header {
+          border-bottom-color: $body-bg-dark;
+        }
+
+        > .modal-body {
+          background-color: bg-color-dark("default");
+        }
+
+        > .modal-footer {
+          border-top-color: $body-bg-dark;
+        }
+      }
+    }
+  }
+}
+
+.palette-accessible {
+
+  .wizard {
+
+    .navbar-primary {
+      background-color: inherit;
+      border-width: 0;
+    }
+
+    .wizard-body {
+      border-left-color: $border-color-default-accessible;
+    }
+  }
+
+  .wizard-fullpage,
+  &.wizard-fullpage {
+
+    .navbar-header {
+      background-color: bg-color-accessible("light");
+    }
+
+    .navbar-wizard {
+      background-color: bg-color-accessible("light");
+      border-top-color: $body-bg-accessible;
+    }
+
+    &.modal {
+
+      > .modal-dialog > .modal-content {
+
+        > .modal-header {
+          border-bottom-color: $body-bg-accessible;
+        }
+
+        > .modal-body {
+          background-color: bg-color-accessible("default");
+        }
+
+        > .modal-footer {
+          border-top-color: $body-bg-accessible;
+        }
+      }
+    }
+  }
+}
+

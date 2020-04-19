@@ -1,0 +1,1518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Cloudera Calculator</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/fluid-bootstrap.css">
+</head>
+
+<body data-spy="scroll" data-target="#my-navbar" data-offset="100">
+  <nav id="navbarToggle" class="navbar navbar-primary navbar-expand-sm collapse show">
+    <a class="navbar-brand collapsed" href="#top" aria-expanded="true" aria-label="Toggle product navigation">
+      <i class="icon fa fa-calculator"></i>
+      <div style="line-height: 1.15">Cloudera<br />Calculator</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle"
+      aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="my-navbar">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#dashboard" data-toggle="tooltip" data-placement="right" data-condition="truncated" title="Dashboard">
+          <span class="icon fa fa-tachometer"></span>
+          Dashboard
+        </a>
+        <a class="nav-item nav-link" href="#environments" data-toggle="tooltip" data-placement="right" data-condition="truncated" title="Environments">
+          <span class="icon fa fa-cloud"></span>
+          Environments
+        </a>
+        <a class="nav-item nav-link" href="#datahubs" data-toggle="tooltip" data-placement="right" data-condition="truncated" title="DataHub Clusters">
+          <span class="icon fa fa-server"></span>
+          DataHub Clusters
+        </a>
+        <a class="nav-item nav-link" href="#datawarehouses" data-toggle="tooltip" data-placement="right" data-condition="truncated" title="Data Warehouses">
+          <span class="icon fa fa-cube"></span>
+          Data Warehouses
+        </a>
+        <a class="nav-item nav-link" href="#mlworkspaces" data-toggle="tooltip" data-placement="right" data-condition="truncated" title="ML Workspaces">
+          <span class="icon fa fa-flask"></span>
+          ML Workspaces
+        </a>
+        <a class="nav-item nav-link" href="#storage" data-toggle="tooltip" data-placement="right" data-condition="truncated" title="Storage">
+          <span class="icon fa fa-hdd-o"></span>
+          Storage
+        </a>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-header fixed-top">
+    <ol class="breadcrumb"><li class="breadcrumb-item">Cloudera Calculator</li><li class="breadcrumb-item">Dashboard</li></ol>
+    <!--<a class="nav-link user-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user-icon">U</span>Username</a>
+    <div class="dropdown-menu user-menu" aria-labelledby="navbarDropdown">
+      <div class="dropdown-header">UI Theme</div>
+      <div class="palette-selector">
+        <div class="form-radio">
+          <input class="form-radio-input" type="radio" name="paletteRadios" id="paletteRadios1" value="hybrid" checked>
+          <label class="form-radio-label" for="paletteRadios1"><i class="icon icon-contrast"></i>Hybrid</label>
+        </div>
+        <div class="form-radio">
+          <input class="form-radio-input" type="radio" name="paletteRadios" id="paletteRadios2" value="dark">
+          <label class="form-radio-label" for="paletteRadios2"><i class="icon icon-dark"></i>Dark</label>
+        </div>
+        <div class="form-radio">
+          <input class="form-radio-input" type="radio" name="paletteRadios" id="paletteRadios3" value="accessible">
+          <label class="form-radio-label" for="paletteRadios3"><i class="icon icon-accessible"></i>Accessible</label>
+        </div>
+      </div>
+    </div>-->
+  </nav>
+  <main id="mainContent">
+    <div id="alertsTopRight" class="alert-container right"></div>
+    <div id="alertsTopLeft" class="alert-container"></div>
+    <div id="alertsBottomRight" class="alert-container bottom right"></div>
+    <div id="alertsBottomLeft" class="alert-container bottom"></div>
+    <section id="dashboard">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <header class="section-header">
+              <h2><i class="fa fa-tachometer mr-1"></i>Dashboard</h2>
+              <h2>
+                <a href="https://getbootstrap.com/docs/4.3/layout/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Layout docs"><span class="icon fa fa-book"></span></a>
+                <a href="#top" class="ml-3"><span class="icon fa fa-angle-double-up"></span></a>
+              </h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h2>Monthly Estimate</h2>
+            <br/>
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">Total</h1>
+                  <p class="h1 text-default"><strong>$7,950</strong></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Cloudera</h3>
+                  <p class="h3 text-default"><strong>$3,800</strong></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">AWS</h3>
+                  <p class="h3 text-default"><strong>$3,000</strong></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Azure</h3>
+                  <p class="h3 text-default"><strong>$1,150</strong></p>
+                </div>
+              </div>
+              <!--<div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">GCP</h3>
+                  <p class="h3 text-default"><strong>$0</strong></p>
+                </div>-->
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="environments">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <header class="section-header">
+              <h2>
+                <span class="icon fa fa-cloud mr-1"></span>
+                Environments
+              </h2>
+              <h2>
+                <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank" data-toggle="tooltip"
+                  data-placement="bottom" title="" data-original-title="Card docs"><span class="icon fa fa-book"></span></a>
+                <a href="#top" class="ml-3"><span class="icon fa fa-angle-double-up"></span></a>
+              </h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Usage</h3>
+                <p>Each CDP Environment requires a Data Lake. The Data Lake includes the SDX components and acts as the shared services layer across the environment.</p>
+                <p>Cloudera provides the Data Lake at no cost. Infrastructure costs must be accounted for.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Environments</h3>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="input-group table-search">
+                          <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-9 text-right">
+                        <!--<button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModalForm">Add Environment</button>-->
+                        <button class="btn btn-primary" onclick="modalWizard.goToStep(1)" data-toggle="modal" data-target="#wizardModal" data-backdrop="static" data-keyboard="false">Add Environment</button>
+                      </div>
+                      <!-- Wizard modal -->
+                      <div class="modal wizard-fullpage fade" id="wizardModal" tabindex="-1" role="dialog" aria-labelledby="wizardModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-fluid">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="modal-title" id="wizardModalTitle">Add Environment</div>
+                            </div>
+                            <div class="modal-body">
+                              <nav class="navbar navbar-primary">
+                                <ol class="stepper stepper-light step-1">
+                                  <li class="active">
+                                    <a href="javascript:void(0);">Required Options</a>
+                                    <div class="desc">Select Cloud Provider and Region</div>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);">Review</a>
+                                    <div class="desc">Infrastructure details</div>
+                                  </li>
+                                  <!--<li>
+                                    <a href="javascript:void(0);">Step C</a>
+                                    <div class="desc">Finish here</div></li>
+                                  </li>-->
+                                </ol>
+                                <ol class="stepper stepper-light step-2">
+                                  <li class="complete">
+                                    <a href="javascript:wizardModal.goToStep(1);">Required Options</a>
+                                    <div class="desc">Select Cloud Provider and Region</div>
+                                  </li>
+                                  <li class="active">
+                                    <a href="javascript:void(0);">Review</a>
+                                    <div class="desc">Infrastructure details</div>
+                                  </li>
+                                  <!--<li>
+                                    <a href="javascript:void(0);">Step C</a>
+                                    <div class="desc">Finish here</div></li>
+                                  </li>-->
+                                </ol>
+                                <ol class="stepper stepper-light step-3">
+                                  <li class="complete">
+                                    <a href="javascript:wizardModal.goToStep(1);">Step A</a>
+                                    <div class="desc">Start here</div>
+                                  </li>
+                                  <li class="complete">
+                                    <a href="javascript:wizardModal.goToStep(2);">Step B</a>
+                                    <div class="desc">Continue here</div>
+                                  </li>
+                                  <li class="active">
+                                    <a href="javascript:void(0);">Step C</a>
+                                    <div class="desc">Finish here</div></li>
+                                  </li>
+                                </ol>
+                              </nav>
+                              <div class="container-fluid step-1">
+                                <header class="wizard-header">
+                                  <h2>Select Cloud Provider and Region</h2>
+                                  <p>Pricing varies by Provider and Region - define an environment to get accurate pricing for your planned deployment.</p>
+                                </header>
+                                <div class="card" id="wizardContent" style="height: 50vh">
+                                  <div class="card-body">
+                                    <form>
+                                      <div class="form-group">
+                                        <label for="envProviderSelect">Provider</label>
+                                        <select class="selectpicker" id="envProviderSelect">
+                                          <option selected>Choose a Cloud Provider</option>
+                                          <option value="AWS">AWS</option>
+                                          <option value="Azure">Azure</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group"><label for="envRegionSelect">Region</label>
+                                        <select class="selectpicker scrollable-menu" id="envRegionSelect">
+                                          <option selected>Choose a Cloud Region</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="envInputName">Environment name</label>
+                                        <input type="text" class="form-control" id="envInputName" placeholder="Enter environment name">
+                                        <small id="envNameHelp" class="form-text text-muted">Choose a short descriptive name to identify this environment</small>
+                                      </div>
+                                      <!--<div class="form-group">
+                                        <label for="alertDuration">Monthly Usage (Hours)</label>
+                                        <input type="number" class="form-control" name="alertDuration" value="730" disabled>
+                                        <small id="emailHelp" class="form-text text-muted">DataLake clusters must run at all times.</small>
+                                      </div>-->
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container-fluid step-2">
+                                <header class="wizard-header">
+                                  <h2>Review</h2>
+                                  <p>Environment details</p>
+                                </header>
+                                <div class="card" id="wizardContent">
+                                  <div class="card-body">
+                                      <h3 class="card-title">Infrastructure</h3>
+                                      <div class="container-fluid">
+                                        <div class="row">
+                                          <div class="col">
+                                            <table id="sortable-example" class="table table-hover">
+                                              <thead>
+                                                <tr>                              
+                                                  <th class="sortable" data-sort="data-name">Role</th>
+                                                  <th class="sortable" data-sort="data-name">Type</th>
+                                                  <th class="sortable text-center" data-sort="data-status">Count</th>
+                                                  <th class="sortable" data-sort="data-login">Hours</th>
+                                                  <th class="sortable" data-sort="data-username">Provider Cost</th>
+                                                  <th class="sortable" data-sort="data-login">Cloudera Cost</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody class="table-data">
+                                                <tr>                                                  
+                                                  <td class="primary data-name">FreeIPA Service</td>
+                                                  <td class="data-env">m5.large</td>
+                                                  <td class="text-center text-base data-status">1</td>
+                                                  <td class="data-username">730</td>
+                                                  <td class="data-login">$70</td>
+                                                  <td class="data-login">$0</td>
+                                                </tr>
+                                                <tr>                                                  
+                                                  <td class="primary data-name">IDBroker Service</td>
+                                                  <td class="data-env">m5.2xlarge</td>
+                                                  <td class="text-center text-base data-status">1</td>
+                                                  <td class="data-username">730</td>
+                                                  <td class="data-login">$280</td>
+                                                  <td class="data-login">$0</td>
+                                                </tr>
+                                                <tr>                                                  
+                                                  <td class="primary data-name">DataLake Master Node</td>
+                                                  <td class="data-env">m5.2xlarge</td>
+                                                  <td class="text-center text-base data-status">1</td>
+                                                  <td class="data-username">730</td>
+                                                  <td class="data-login">$280</td>
+                                                  <td class="data-login">$0</td>
+                                                </tr>
+                                                <tr>                                                  
+                                                  <td class="primary data-name">RDS DB instance</td>
+                                                  <td class="data-env">db.m5.large</td>
+                                                  <td class="text-center text-base data-status">1</td>
+                                                  <td class="data-username">730</td>
+                                                  <td class="data-login">$130</td>
+                                                  <td class="data-login">$0</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default wizard-cancel-button" data-toggle="modal" data-target="#cancelWizard" data-backdrop="false">Cancel</button>
+                              <button type="button" class="btn btn-secondary wizard-nav-button wizard-back-button" onclick="modalWizard.back()">Back</button>
+                              <button type="button" class="btn btn-primary wizard-nav-button wizard-next-button" onclick="modalWizard.next()">Next</button>
+                              <button type="button" class="btn btn-primary wizard-nav-button wizard-finish-button" data-dismiss="modal">Finish</a>
+                            </div>
+                
+                            <!-- Cancel Confirmation -->
+                            <div id="cancelWizard" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cancelWizardHeader">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <span class="modal-title" id="cancelWizardHeader">Cancel wizard</span>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>Are you sure?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary wizard-nav-button" onclick="cancelConfirmation('#cancelWizard')">Cancel</button>
+                                    <button id="finish" type="button" class="btn btn-primary wizard-nav-button" data-dismiss="modal">OK</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <table id="sortable-example" class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th class="sortable" data-sort="data-name">Name</th>
+                              <th class="sortable text-center" data-sort="data-status">Provider</th>
+                              <th class="sortable" data-sort="data-username">Region</th>
+                              <th class="sortable" data-sort="data-login">Hours</th>
+                              <th>Actions</th>
+                              <th class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                                  <label class="form-check-label" for="checkAll"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-data" id="envListTable">
+                            <!--Populated via js-->
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="6">
+                                <nav class="pagination" aria-label="Page navigation example">
+                                  <div class="fade">
+                                    <div class="form-group">
+                                      <label for="itemsPerPage">Show:</label>
+                                      <select id="itemsPerPage" class="selectpicker">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group dropdown">
+                                      <label for="goToPage">Go:</label>
+                                      <input id="goToPage" class="form-control" type="text" value="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" autocomplete="off">
+                                      <ul class="dropdown-menu">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">500</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1000</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <span class="fade show">1-10 of 1000</span>
+                                  <a class="page-link disabled" href="#" aria-label="Previous">
+                                    <i class="icon icon-previous" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <i class="icon icon-next" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </nav>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Total</h1>
+                <p class="h1 text-default"><strong id="envCostTotal">$1,480</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Cloudera</h3>
+                <p class="h3 text-default"><strong id="envCostCldr">$0</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">AWS</h3>
+                <p class="h3 text-default"><strong id="envCostAws">$760</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Azure</h3>
+                <p class="h3 text-default"><strong id="envCostAzure">$720</strong></p>
+              </div>
+            </div>
+            <!--<div class="card">
+              <div class="card-body">
+                <h3 class="card-title">GCP</h3>
+                <p class="h3 text-default"><strong>$0</strong></p>
+              </div>-->
+          </div>
+        </div>
+        </div>
+    </section>
+    <section id="datahubs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <header class="section-header">
+              <h2>
+                <span class="icon fa fa-server mr-1"></span>
+                DataHub Clusters
+              </h2>
+              <h2>
+                <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank" data-toggle="tooltip"
+                  data-placement="bottom" title="" data-original-title="Card docs"><span class="icon fa fa-book"></span></a>
+                <a href="#top" class="ml-3"><span class="icon fa fa-angle-double-up"></span></a>
+              </h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Usage</h3>
+                <p>Something intelligent about DataHub clusters.</p>
+                <p>Additional DataHub related brilliance. Possibly pricing related.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Clusters</h3>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="input-group table-search">
+                          <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-9 text-right">
+                        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#clusterModalForm">Add Cluster</button>
+                      </div>
+                      <div class="modal fade" id="clusterModalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalFormTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="modal-title">Add Cluster</div>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Environment</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose an Environment</option>
+                                    <option value="1">demo-aws</option>
+                                    <option value="2">demo-azure</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Cluster Type</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose a Cluster Type</option>
+                                    <option value="1">Operational Database</option>
+                                    <option value="2">Data Engineering</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="alertDuration">Monthly Usage (Hours)</label>
+                                  <input type="number" class="form-control" name="alertDuration" value="730">
+                                  <small id="emailHelp" class="form-text text-muted">Estimated hours running per month.</small>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--<div class="col-9 text-right">
+                        <div class="dropdown ml-2">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div>
+                      </div>-->
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <table id="sortable-example" class="table table-hover">
+                          <thead>
+                            <tr>                              
+                              <th class="sortable" data-sort="data-name">Name</th>
+                              <th class="sortable" data-sort="data-name">Environment</th>
+                              <th class="sortable text-center" data-sort="data-status">Provider</th>
+                              <th class="sortable" data-sort="data-username">Region</th>
+                              <th class="sortable" data-sort="data-login">Hours</th>
+                              <th>Actions</th>
+                              <th class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                                  <label class="form-check-label" for="checkAll"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-data">
+                            <tr>
+                              
+                              <td class="primary data-name"><a href="#">operational-db-aws</a></td>
+                              <td class="data-env">demo-aws</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-amazon"><span class="sr-only">AWS</span></td>
+                              <td class="data-username">US East (N Virginia)</td>
+                              <td class="data-login">730</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="1" id="row1">
+                                  <label class="form-check-label" for="row1"></label>
+                                </div>
+                              </th>
+                            </tr>
+                            <tr>
+                              
+                              <td class="primary data-name"><a href="#">data-engineering-azure</a></td>
+                              <td class="data-env">demo-azure</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-windows"><span class="sr-only">Azure</span></td>
+                              <td class="data-username">West Central US</td>
+                              <td class="data-login">80</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="2" id="row2">
+                                  <label class="form-check-label" for="row2"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="7">
+                                <nav class="pagination" aria-label="Page navigation example">
+                                  <div class="fade">
+                                    <div class="form-group">
+                                      <label for="itemsPerPage">Show:</label>
+                                      <select id="itemsPerPage" class="selectpicker">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group dropdown">
+                                      <label for="goToPage">Go:</label>
+                                      <input id="goToPage" class="form-control" type="text" value="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" autocomplete="off">
+                                      <ul class="dropdown-menu">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">500</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1000</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <span class="fade show">1-10 of 1000</span>
+                                  <a class="page-link disabled" href="#" aria-label="Previous">
+                                    <i class="icon icon-previous" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <i class="icon icon-next" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </nav>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Total</h1>
+                <p class="h1 text-default"><strong>$3,388</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Cloudera</h3>
+                <p class="h3 text-default"><strong>$1,303</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">AWS</h3>
+                <p class="h3 text-default"><strong>$1,962</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Azure</h3>
+                <p class="h3 text-default"><strong>$123</strong></p>
+              </div>
+            </div>
+            <!--<div class="card">
+              <div class="card-body">
+                <h3 class="card-title">GCP</h3>
+                <p class="h3 text-default"><strong>$0</strong></p>
+              </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="datawarehouses">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <header class="section-header">
+              <h2>
+                <span class="icon fa fa-cube mr-1"></span>
+                Data Warehouses
+              </h2>
+              <h2>
+                <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank" data-toggle="tooltip"
+                  data-placement="bottom" title="" data-original-title="Card docs"><span class="icon fa fa-book"></span></a>
+                <a href="#top" class="ml-3"><span class="icon fa fa-angle-double-up"></span></a>
+              </h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Usage</h3>
+                <p>Something intelligent about Data Warehouses.</p>
+                <p>Additional DW related brilliance. Possibly pricing related.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Data Warehouses</h3>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="input-group table-search">
+                          <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-9 text-right">
+                        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#dwModalForm">Add Data Warehouse</button>
+                      </div>
+                      <div class="modal fade" id="dwModalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalFormTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="modal-title">Add Data Warehouse</div>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Environment</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose an Environment</option>
+                                    <option value="1">demo-aws</option>
+                                    <option value="2">demo-azure</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Cluster Type</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose a Cluster Type</option>
+                                    <option value="1">Operational Database</option>
+                                    <option value="2">Data Engineering</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="alertDuration">Monthly Usage (Hours)</label>
+                                  <input type="number" class="form-control" name="alertDuration" value="730">
+                                  <small id="emailHelp" class="form-text text-muted">Estimated hours running per month.</small>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--<div class="col-9 text-right">
+                        <div class="dropdown ml-2">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div>
+                      </div>-->
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <table id="sortable-example" class="table table-hover">
+                          <thead>
+                            <tr>                              
+                              <th class="sortable" data-sort="data-name">Name</th>
+                              <th class="sortable" data-sort="data-name">Environment</th>
+                              <th class="sortable text-center" data-sort="data-status">Provider</th>
+                              <th class="sortable" data-sort="data-username">Region</th>
+                              <th class="sortable" data-sort="data-login">Hours</th>
+                              <th>Actions</th>
+                              <th class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                                  <label class="form-check-label" for="checkAll"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-data">
+                            <tr>
+                              
+                              <td class="primary data-name"><a href="#">operational-db-aws</a></td>
+                              <td class="data-env">demo-aws</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-amazon"><span class="sr-only">AWS</span></td>
+                              <td class="data-username">US East (N Virginia)</td>
+                              <td class="data-login">730</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="1" id="row1">
+                                  <label class="form-check-label" for="row1"></label>
+                                </div>
+                              </th>
+                            </tr>
+                            <tr>
+                              
+                              <td class="primary data-name"><a href="#">data-engineering-azure</a></td>
+                              <td class="data-env">demo-azure</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-windows"><span class="sr-only">Azure</span></td>
+                              <td class="data-username">West Central US</td>
+                              <td class="data-login">80</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="2" id="row2">
+                                  <label class="form-check-label" for="row2"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="7">
+                                <nav class="pagination" aria-label="Page navigation example">
+                                  <div class="fade">
+                                    <div class="form-group">
+                                      <label for="itemsPerPage">Show:</label>
+                                      <select id="itemsPerPage" class="selectpicker">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group dropdown">
+                                      <label for="goToPage">Go:</label>
+                                      <input id="goToPage" class="form-control" type="text" value="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" autocomplete="off">
+                                      <ul class="dropdown-menu">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">500</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1000</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <span class="fade show">1-10 of 1000</span>
+                                  <a class="page-link disabled" href="#" aria-label="Previous">
+                                    <i class="icon icon-previous" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <i class="icon icon-next" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </nav>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Total</h1>
+                <p class="h1 text-default"><strong>$3,388</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Cloudera</h3>
+                <p class="h3 text-default"><strong>$1,303</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">AWS</h3>
+                <p class="h3 text-default"><strong>$1,962</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Azure</h3>
+                <p class="h3 text-default"><strong>$123</strong></p>
+              </div>
+            </div>
+            <!--<div class="card">
+              <div class="card-body">
+                <h3 class="card-title">GCP</h3>
+                <p class="h3 text-default"><strong>$0</strong></p>
+              </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="mlworkspaces">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <header class="section-header">
+              <h2>
+                <span class="icon fa fa-flask mr-1"></span>
+                ML Workspaces
+              </h2>
+              <h2>
+                <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank" data-toggle="tooltip"
+                  data-placement="bottom" title="" data-original-title="Card docs"><span class="icon fa fa-book"></span></a>
+                <a href="#top" class="ml-3"><span class="icon fa fa-angle-double-up"></span></a>
+              </h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Usage</h3>
+                <p>Something intelligent about ML Workspaces.</p>
+                <p>Additional ML related brilliance. Possibly pricing related.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">ML Workspaces</h3>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="input-group table-search">
+                          <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-9 text-right">
+                        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#mlModalForm">Add ML Workspace</button>
+                      </div>
+                      <div class="modal fade" id="mlModalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalFormTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="modal-title">Add ML Workspace</div>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Environment</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose an Environment</option>
+                                    <option value="1">demo-aws</option>
+                                    <option value="2">demo-azure</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Cluster Type</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose a Cluster Type</option>
+                                    <option value="1">Operational Database</option>
+                                    <option value="2">Data Engineering</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="alertDuration">Monthly Usage (Hours)</label>
+                                  <input type="number" class="form-control" name="alertDuration" value="730">
+                                  <small id="emailHelp" class="form-text text-muted">Estimated hours running per month.</small>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--<div class="col-9 text-right">
+                        <div class="dropdown ml-2">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div>
+                      </div>-->
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <table id="sortable-example" class="table table-hover">
+                          <thead>
+                            <tr>                              
+                              <th class="sortable" data-sort="data-name">Name</th>
+                              <th class="sortable" data-sort="data-name">Environment</th>
+                              <th class="sortable text-center" data-sort="data-status">Provider</th>
+                              <th class="sortable" data-sort="data-username">Region</th>
+                              <th class="sortable" data-sort="data-login">Hours</th>
+                              <th>Actions</th>
+                              <th class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                                  <label class="form-check-label" for="checkAll"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-data">
+                            <tr>
+                              
+                              <td class="primary data-name"><a href="#">operational-db-aws</a></td>
+                              <td class="data-env">demo-aws</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-amazon"><span class="sr-only">AWS</span></td>
+                              <td class="data-username">US East (N Virginia)</td>
+                              <td class="data-login">730</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="1" id="row1">
+                                  <label class="form-check-label" for="row1"></label>
+                                </div>
+                              </th>
+                            </tr>
+                            <tr>
+                              
+                              <td class="primary data-name"><a href="#">data-engineering-azure</a></td>
+                              <td class="data-env">demo-azure</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-windows"><span class="sr-only">Azure</span></td>
+                              <td class="data-username">West Central US</td>
+                              <td class="data-login">80</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="2" id="row2">
+                                  <label class="form-check-label" for="row2"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="7">
+                                <nav class="pagination" aria-label="Page navigation example">
+                                  <div class="fade">
+                                    <div class="form-group">
+                                      <label for="itemsPerPage">Show:</label>
+                                      <select id="itemsPerPage" class="selectpicker">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group dropdown">
+                                      <label for="goToPage">Go:</label>
+                                      <input id="goToPage" class="form-control" type="text" value="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" autocomplete="off">
+                                      <ul class="dropdown-menu">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">500</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1000</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <span class="fade show">1-10 of 1000</span>
+                                  <a class="page-link disabled" href="#" aria-label="Previous">
+                                    <i class="icon icon-previous" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <i class="icon icon-next" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </nav>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Total</h1>
+                <p class="h1 text-default"><strong>$3,388</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Cloudera</h3>
+                <p class="h3 text-default"><strong>$1,303</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">AWS</h3>
+                <p class="h3 text-default"><strong>$1,962</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Azure</h3>
+                <p class="h3 text-default"><strong>$123</strong></p>
+              </div>
+            </div>
+            <!--<div class="card">
+              <div class="card-body">
+                <h3 class="card-title">GCP</h3>
+                <p class="h3 text-default"><strong>$0</strong></p>
+              </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="storage">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <header class="section-header">
+              <h2>
+                <span class="icon fa fa-hdd-o mr-1"></span>
+                Storage
+              </h2>
+              <h2>
+                <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank" data-toggle="tooltip"
+                  data-placement="bottom" title="" data-original-title="Card docs"><span class="icon fa fa-book"></span></a>
+                <a href="#top" class="ml-3"><span class="icon fa fa-angle-double-up"></span></a>
+              </h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Usage</h3>
+                <p>Something intelligent about Storage.</p>
+                <p>Additional Storage related brilliance. Possibly pricing related.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Storage</h3>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-3">
+                        <!--<div class="input-group table-search">
+                          <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                          </div>
+                        </div>-->
+                      </div>
+                      <div class="col-9 text-right">
+                        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#storageModalForm">Add Storage</button>
+                      </div>
+                      <div class="modal fade" id="storageModalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalFormTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <div class="modal-title">Add Storage</div>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Environment</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose an Environment</option>
+                                    <option value="1">demo-aws</option>
+                                    <option value="2">demo-azure</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="defaultSelect">Storage Type</label>
+                                  <select class="selectpicker" id="defaultSelect">
+                                    <option selected>Choose a Storage Type</option>
+                                    <option value="1">S3</option>
+                                    <option value="2">EBS</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="alertDuration">Storage (GB)</label>
+                                  <input type="number" class="form-control" name="alertDuration" value="100">
+                                  <small id="emailHelp" class="form-text text-muted">Estimated total data storage.</small>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--<div class="col-9 text-right">
+                        <div class="dropdown ml-2">
+                          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div>
+                      </div>-->
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <table id="sortable-example" class="table table-hover">
+                          <thead>
+                            <tr>                              
+                              <th class="sortable" data-sort="data-name">Type</th>
+                              <th class="sortable" data-sort="data-name">Environment</th>
+                              <th class="sortable text-center" data-sort="data-status">Provider</th>
+                              <th class="sortable" data-sort="data-username">Region</th>
+                              <th class="sortable" data-sort="data-login">Storage (GB)</th>
+                              <th>Actions</th>
+                              <th class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                                  <label class="form-check-label" for="checkAll"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-data">
+                            <tr>
+                              
+                              <td class="primary data-name">S3</td>
+                              <td class="data-env">demo-aws</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-amazon"><span class="sr-only">AWS</span></td>
+                              <td class="data-username">US East (N Virginia)</td>
+                              <td class="data-login">1500</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="1" id="row1">
+                                  <label class="form-check-label" for="row1"></label>
+                                </div>
+                              </th>
+                            </tr>
+                            <tr>
+                              
+                              <td class="primary data-name">ADLS</td>
+                              <td class="data-env">demo-azure</td>
+                              <td class="text-center text-base data-status"><i class="icon fa fa-windows"><span class="sr-only">Azure</span></td>
+                              <td class="data-username">West Central US</td>
+                              <td class="data-login">200</td>
+                              <td>
+                                <ul class="actions">
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Edit"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="icon fa fa-trash" data-toggle="tooltip" data-placement="right" title="Delete"></i></a>
+                                  </li>
+                                </ul>
+                              </td>
+                              <th scope="row" class="text-center">
+                                <div class="form-check">
+                                  <input class="form-check-input table-example-check" type="checkbox" value="2" id="row2">
+                                  <label class="form-check-label" for="row2"></label>
+                                </div>
+                              </th>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td colspan="7">
+                                <nav class="pagination" aria-label="Page navigation example">
+                                  <div class="fade">
+                                    <div class="form-group">
+                                      <label for="itemsPerPage">Show:</label>
+                                      <select id="itemsPerPage" class="selectpicker">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group dropdown">
+                                      <label for="goToPage">Go:</label>
+                                      <input id="goToPage" class="form-control" type="text" value="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" autocomplete="off">
+                                      <ul class="dropdown-menu">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">500</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1000</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <span class="fade show">1-10 of 1000</span>
+                                  <a class="page-link disabled" href="#" aria-label="Previous">
+                                    <i class="icon icon-previous" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="page-link" href="#" aria-label="Next">
+                                    <i class="icon icon-next" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </nav>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Total</h1>
+                <p class="h1 text-default"><strong>$1,200</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Cloudera</h3>
+                <p class="h3 text-default"><strong>$0</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">AWS</h3>
+                <p class="h3 text-default"><strong>$1,000</strong></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Azure</h3>
+                <p class="h3 text-default"><strong>$200</strong></p>
+              </div>
+            </div>
+            <!--<div class="card">
+              <div class="card-body">
+                <h3 class="card-title">GCP</h3>
+                <p class="h3 text-default"><strong>$0</strong></p>
+              </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <nav class="navbar navbar-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <p>You really like to scroll.</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Required libraries for Bootstrap 4 JS components to work (https://getbootstrap.com/docs/4.3/getting-started/introduction/#js) -->
+  <!-- jQuery first, then Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/fluid-bootstrap.js"></script>
+  <script src="js/list.js"></script>
+  <script src="js/jquery.csv.js"></script>
+  <script src="js/demo.js"></script>  
+  <script>
+    let onPageWizard;
+    let modalWizard;
+    let demoEstimate;
+    $(function () {
+      onPageWizard = new Wizard('wizardOnPage');
+      modalWizard = new Wizard('wizardModal');
+      demoEstimate = new Estimate('demoEstimate');
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+    });
+</script>  
+</body>
+
+</html>

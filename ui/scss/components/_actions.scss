@@ -1,0 +1,29 @@
+ul.actions { // stylelint-disable-line selector-no-qualifying-type
+  margin: 0;
+  padding: 0;
+}
+
+.actions {
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 10px;
+  }
+
+  .icon {
+    font-size: $font-size-base;
+  }
+
+  .dropdown-toggle {
+
+    &::after {
+      border: 0;
+      content: ":";
+      font-family: $font-family-symbol;
+      font-size: px(14);
+      margin-left: -2px;
+      vertical-align: inherit;
+    }
+  }
+}

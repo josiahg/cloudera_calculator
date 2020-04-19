@@ -1,0 +1,256 @@
+// stylelint-disable selector-no-qualifying-type
+
+form:not(.form-inline) {
+
+  .form-group:not(.row) {
+
+    label {
+      display: block;
+    }
+  }
+}
+
+label {
+  color: $label-color;
+}
+
+.form-row {
+
+  &:not(:last-child) {
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-control {
+
+  &:disabled {
+    border: 0;
+  }
+}
+
+.valid-feedback,
+.invalid-feedback {
+  color: theme-color("default");
+
+  &::before {
+    font-family: $font-family-symbol;
+    margin-right: 3px;
+  }
+}
+
+.inline-feedback {
+  bottom: ($input-padding-y * 2 + $input-line-height * px(14)) / 2;
+  left: 100%;
+  margin-left: 5px;
+  margin-top: 0;
+  position: absolute;
+  transform: translateY(50%);
+}
+
+.valid-feedback::before {
+  color: status-color("success");
+  content: status-icon("success");
+}
+
+.invalid-feedback::before {
+  color: status-color("danger");
+  content: status-icon("danger");
+}
+
+// Make all <select> dropdowns themed
+select {
+  @extend .custom-select;
+}
+
+// Make all checkboxes and radios themed
+.form-check,
+.form-radio {
+  @extend .custom-control;
+
+  .form-check-input,
+  .form-radio-input {
+    @extend .custom-control-input;
+
+    &:checked + .form-check-label,
+    &:checked + .form-radio-label {
+      &::before {
+        background-color: $blue;
+      }
+    }
+
+    &:checked + .form-check-label,
+    &:checked + .form-radio-label,
+    &:disabled + .form-check-label,
+    &:disabled + .form-radio-label {
+      &::before {
+        border: 0;
+      }
+    }
+  }
+
+  .form-check-label,
+  .form-radio-label {
+    @extend .custom-control-label;
+
+    &::before {
+      border: $custom-control-indicator-border;
+    }
+  }
+}
+
+.form-check {
+  @extend .custom-checkbox;
+}
+
+.form-radio {
+  @extend .custom-radio;
+}
+
+.form-check-inline,
+.form-radio-inline {
+  align-items: center;
+  display: inline-flex;
+  margin-right: $form-check-inline-margin-x;
+  padding-left: 5px; // Override base .form-check
+
+  // Undo .form-check-input defaults and add some `margin-right`.
+  .form-check-input,
+  .form-radio-input {
+    margin-left: 0;
+    margin-right: $form-check-inline-input-margin-x;
+    margin-top: 0;
+    position: static;
+  }
+}
+
+.palette-dark {
+
+  label {
+    color: $label-color-dark;
+  }
+
+  .form-control {
+    background-color: $input-bg-dark;
+    border-color: $input-border-color-dark;
+    color: $input-color-dark;
+
+    @include box-shadow($input-box-shadow-dark);
+    @include form-control-focus-dark();
+
+    &::placeholder {
+      color: $input-placeholder-color-dark;
+    }
+
+    &:disabled,
+    &[readonly] {
+      background-color: $input-disabled-bg-dark;
+    }
+  }
+
+  select.form-control {
+    &:focus::-ms-value {
+      background-color: $input-bg-dark;
+      color: $input-color-dark;
+    }
+  }
+
+  .form-control-plaintext {
+    color: $input-plaintext-color-dark;
+  }
+
+  .form-check-input {
+
+    &:disabled ~ .form-check-label {
+      color: $text-disabled-dark;
+    }
+  }
+
+  @each $state, $data in $form-validation-states-dark {
+    @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+  }
+
+  .valid-feedback,
+  .invalid-feedback {
+    color: theme-color("default");
+  }
+
+  .valid-feedback::before {
+    color: status-color("success");
+    content: status-icon("success");
+  }
+
+  .invalid-feedback::before {
+    color: status-color("danger");
+    content: status-icon("danger");
+  }
+
+  .form-check,
+  .form-radio {
+
+    .form-check-input,
+    .form-radio-input {
+
+      &:checked + .form-check-label,
+      &:checked + .form-radio-label {
+        &::before {
+          background-color: color-dark("blue");
+        }
+      }
+    }
+
+    .form-check-label,
+    .form-radio-label {
+
+      &::before {
+        border: $custom-control-indicator-border-dark;
+      }
+    }
+  }
+}
+
+.palette-accessible {
+
+  .form-control {
+    background-color: $input-bg-accessible;
+    border-color: $input-border-color-accessible;
+    color: $input-color-accessible;
+
+    @include box-shadow($input-box-shadow-accessible);
+    @include form-control-focus-accessible();
+
+    &::placeholder {
+      color: $input-placeholder-color-accessible;
+    }
+
+    &:disabled,
+    &[readonly] {
+      background-color: $input-disabled-bg-accessible;
+    }
+  }
+
+  select.form-control {
+    &:focus::-ms-value {
+      background-color: $input-bg-accessible;
+      color: $input-color-accessible;
+    }
+  }
+
+  .form-control-plaintext {
+    color: $input-plaintext-color-accessible;
+  }
+
+  .form-check-input {
+
+    &:disabled ~ .form-check-label {
+      color: $text-disabled-accessible;
+    }
+  }
+
+  @each $state, $data in $form-validation-states-accessible {
+    @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+  }
+}

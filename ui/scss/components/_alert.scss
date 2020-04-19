@@ -1,0 +1,130 @@
+.alert {
+  align-items: center;
+  box-shadow: $box-shadow-lg;
+  display: flex;
+  font-size: $font-size-sm;
+  margin-bottom: 0;
+
+  + .alert,
+  + .alert-collapse .alert {
+    margin-top: $grid-gutter-width;
+  }
+
+  > div {
+    margin-left: $grid-gutter-width;
+  }
+
+  &::before {
+    font-family: $font-family-symbol;
+    font-size: $alert-icon-font-size;
+    height: $alert-icon-font-size;
+    line-height: 1;
+  }
+
+  &:hover::after {
+    color: theme-color("default");
+  }
+}
+
+.alert-collapse {
+
+  + .alert,
+  + .alert-collapse .alert {
+    margin-top: $grid-gutter-width;
+  }
+}
+
+.alert-dismissible {
+
+  .close {
+    padding: 0;
+    right: 2px;
+    top: 2px;
+  }
+}
+
+.alert-heading {
+  font-size: $font-size-base;
+  line-height: $alert-icon-font-size;
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    background-color: theme-color-level($color, $alert-bg-level);
+    border-color: theme-color-level($color, $alert-border-level);
+    color: text-color("default");
+
+    .alert-heading,
+    &::before {
+      color: $value;
+    }
+  }
+}
+
+.alert-default {
+  border-color: $border-color-default;
+
+  > div {
+    margin-left: 0;
+  }
+}
+
+@each $icon, $value in $status-icons {
+  .alert-#{$icon} {
+    &::before {
+      content: $value;
+    }
+  }
+}
+
+.palette-dark {
+  .alert {
+
+    &:hover::after {
+      color: theme-color-dark("default");
+    }
+  }
+
+  @each $color, $value in $theme-colors-dark {
+    .alert-#{$color} {
+      background-color: theme-color-level-dark($color, $alert-bg-level);
+      border-color: theme-color-level-dark($color, $alert-border-level);
+      color: text-color-dark("default");
+
+      .alert-heading,
+      &::before {
+        color: $value;
+      }
+    }
+  }
+
+  .alert-default {
+    border-color: $border-color-default-dark;
+  }
+}
+
+.palette-accessible {
+  .alert {
+
+    &:hover::after {
+      color: theme-color-accessible("default");
+    }
+  }
+
+  @each $color, $value in $theme-colors-accessible {
+    .alert-#{$color} {
+      background-color: bg-color-accessible("light");
+      border-color: theme-color-level-accessible($color, $alert-border-level);
+      color: text-color-accessible("default");
+
+      .alert-heading,
+      &::before {
+        color: $value;
+      }
+    }
+  }
+
+  .alert-default {
+    border-color: $border-color-default-accessible;
+  }
+}

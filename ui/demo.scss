@@ -1,0 +1,191 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "scss/functions";
+@import "scss/variables";
+
+.wizard {
+
+  .alert-container.bottom {
+    bottom: $wizard-navbar-height;
+  }
+}
+
+#wizardContent {
+  height: 50vh;
+}
+
+.step-2,
+.step-3 {
+  display: none;
+}
+
+.alert-container {
+  position: fixed;
+  z-index: $zindex-fixed;
+  pointer-events: none;
+  padding: $grid-gutter-width;
+  width: 35%;
+
+  * {
+    pointer-events: all;
+  }
+}
+
+.alert-container-inline {
+
+  .alert:last-child {
+    margin-bottom: space(16);
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: space(16);
+  padding-bottom: space(8);
+}
+
+section {
+  min-height: 100vh;
+}
+
+.specimen {
+  margin-bottom: 15px;
+  padding: 15px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.swatch {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.ramp {
+
+  .swatch {
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.row:last-child .swatch {
+  margin-bottom: 0;
+}
+
+.col-3 {
+
+  &.palette-dark,
+  &.palette-accessible {
+    padding: 0;
+  }
+}
+
+.charmap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $grid-gutter-width / -2;
+
+  > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: $bg-default;
+    padding: $grid-gutter-width / 2;
+    margin: $grid-gutter-width / 2;
+
+    * {
+      text-align: center;
+      margin-bottom: $grid-gutter-width / 4;
+
+      &:first-child {
+        margin-top: $grid-gutter-width / 4;
+      }
+    }
+  }
+}
+
+#containerExample,
+#containerFluidExample {
+  border: $border-color-default 1px solid;
+}
+
+#modalFluidContainerExample {
+
+  .row [class^="col-"] {
+    background: $bg-default;
+    padding: 1rem;
+  }
+}
+
+.modal-example-button {
+  width: 200px;
+}
+
+.collapse-row.collapsed + tr {
+  display: none;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 100px;
+}
+
+.mh .dropdown-menu {
+  max-height: 100px;
+}
+
+.palette-dark {
+
+  .charmap {
+
+    > div {
+      background-color: $bg-default-dark;
+    }
+  }
+
+  #containerExample,
+  #containerFluidExample {
+    border-color: $border-color-default-dark;
+  }
+
+  #modalFluidContainerExample {
+
+    .row [class^="col-"] {
+      background: $bg-default-dark;
+    }
+  }
+}
+
+.palette-accessible {
+
+  .charmap {
+
+    > div {
+      background-color: $bg-default-accessible;
+      border: 1px solid $border-color-default-accessible;
+      border-radius: $border-radius;
+    }
+  }
+
+  #containerExample,
+  #containerFluidExample {
+    border-color: $border-color-default-accessible;
+  }
+
+  #modalFluidContainerExample {
+
+    .row [class^="col-"] {
+      background: $bg-default-accessible;
+    }
+  }
+}
+
