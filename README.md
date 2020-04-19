@@ -6,6 +6,9 @@
 2. Go to UI directory `cd ui`
 2. Run `npm install`
 3. Run `gulp`
+
+(If `gulp` fails you may need to run `npm install -g gulp`)
+
 4. Open http://localhost:8000
 
 Changing files will trigger a rebuild and the live preview will be refreshed.
