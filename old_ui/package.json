@@ -1,0 +1,61 @@
+{
+  "name": "fluid-bootstrap",
+  "version": "1.0.0",
+  "description": "A Fluid Design System implementation based on Bootstrap",
+  "homepage": "http://productdesign.hortonworks.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hortonworks/fluid-bootstrap-theme"
+  },
+  "contributors": [
+    "Jason Golieb",
+    "Istvan Tobias",
+    "Mihai Mihalache"
+  ],
+  "keywords": [
+    "fluid",
+    "bootstrap",
+    "themes"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "IE 10"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "autoprefixer": "^8.6.5",
+    "bootstrap": "4.3.1",
+    "bootstrap-select": "1.13.5",
+    "del": "^3.0.0",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob-import": "^0.1.0",
+    "gulp-scss-lint": "^0.7.2",
+    "gulp-serve": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-uglify": "^3.0.1",
+    "javascript-autocomplete": "^1.0.3",
+    "jquery": "^3.4.0",
+    "list.js": "1.5.0",
+    "popper.js": "1.14.7",
+    "postcss-import": "^12.0.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-twbs-bootstrap": "^0.3.0"
+  },
+  "dependencies": {
+    "query-string": "^6.4.2"
+  }
+}
