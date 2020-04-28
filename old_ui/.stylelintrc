@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "stylelint-config-twbs-bootstrap/scss"
-  ],
-  rules: {
-    "order/properties-order": null,
-    "order/properties-alphabetical-order": true
-  }
-}
