@@ -1,12 +1,12 @@
 import React from 'react';
 
 const MLWorkspaces = (props) => {
-    return (
-        <div>
-            <br/>
-            ML Workspaces
-        </div>
-    )
+  return (
+    <div>
+      <br/>
+      ML Workspaces
+    </div>
+  )
 };
 
 export default MLWorkspaces;
