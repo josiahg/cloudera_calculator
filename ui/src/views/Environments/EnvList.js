@@ -16,7 +16,7 @@ class EnvList extends React.Component {
   // ];
   
   componentDidMount() {
-  fetch("http://localhost:4000/environments")
+  fetch("http://localhost:4000/api/environments")
   .then(res => res.json())
   .then(
     (result) => {
