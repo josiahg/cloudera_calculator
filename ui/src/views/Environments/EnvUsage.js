@@ -1,12 +1,8 @@
 import React from 'react';
-//import { Row, Col, Container } from "reactstrap";
 
-const Environments = (props) => {
+const EnvUsage = (props) => {
     return (
-      <div>
-        <br/>
-        <div className="container-fluid">
-          <div className="row">
+        <div className="row">
             <div className="col">
               <div className="card">
                 <div className="card-body">
@@ -17,9 +13,7 @@ const Environments = (props) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
     )
-  };
+};
 
-export default Environments;
+export default EnvUsage;

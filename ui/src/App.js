@@ -5,7 +5,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 
 import Dashboard from './views/Dashboard'
-import Environments from './views/Environments'
+import Environments from './views/Environments/Environments'
 import Datahubs from './views/Datahubs'
 import MLWorkspaces from './views/MLWorkspaces'
 import StorageCal from './views/StorageCal'

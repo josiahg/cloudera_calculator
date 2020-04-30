@@ -3,8 +3,9 @@
         "start": "fastify start server.js"
     },
     "dependencies": {
-        "ejs": "^3.0.2",
-        "fastify": "^2.13.1",
+        "ejs": "^3.1.2",
+        "fastify": "^2.14.0",
+        "fastify-cors": "^3.0.3",
         "fastify-static": "^2.7.0",
         "point-of-view": "^3.8.0"
     }

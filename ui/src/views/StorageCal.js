@@ -4,7 +4,7 @@ const StorageCal = (props) => {
     return (
         <div>
             <br/>
-            Data Warehouses
+            Storage
         </div>
     )
 };
