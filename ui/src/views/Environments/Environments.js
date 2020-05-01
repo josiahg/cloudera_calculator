@@ -44,7 +44,7 @@ const Environments = (props) => {
                 <th className="text-center">
                 <div className="form-check">
                   <input className="form-check-input" type="checkbox" value="" id="checkAll"/>
-                  <label className="form-check-label" for="checkAll"></label>
+                  <label className="form-check-label" htmlFor="checkAll"></label>
                 </div>
                 </th>
               </tr>

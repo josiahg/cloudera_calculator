@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {browserHistory} from 'react-router';
 import axios from 'axios';
 
 class EnvAdd extends React.Component {
@@ -22,6 +23,7 @@ class EnvAdd extends React.Component {
     axios.post('http://localhost:4000/api/environments/add', this.state)
     .then(function (response) {
       console.log(response);
+      window.location.href = '/environments'
     })
     .catch(function (error) {
       console.log(error)
@@ -62,9 +64,9 @@ class EnvAdd extends React.Component {
                 </div>
                 </form>
                 <br />
-                <Link to="/environments">
+                
                   <button onClick={this.onSubmit} className="btn btn-primary">Done</button>
-                </Link>
+                
                 </div>
               </div>
             </div>

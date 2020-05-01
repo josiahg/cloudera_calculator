@@ -60,7 +60,7 @@ class EnvList extends React.Component {
             </a>        
             </li>        
             <li className="del-can">          
-            <a href="#" onclick="delEnvRow(event, \''+name+'\')" className="del-can">
+            <a href="#" className="del-can">
             <i className="icon fa fa-trash del-can" data-toggle="tooltip" data-placement="right" title="Delete"></i>
             </a>        
             </li>      
@@ -69,7 +69,7 @@ class EnvList extends React.Component {
           <th scope="row" className="text-center">      
           <div className="form-check">
             <input className="form-check-input table-example-check" type="checkbox" value="1" id="row1" />        
-            <label className="form-check-label" for="row1"></label>      
+            <label className="form-check-label" htmlFor="row1"></label>      
           </div>    
           </th>  
         </tr>
