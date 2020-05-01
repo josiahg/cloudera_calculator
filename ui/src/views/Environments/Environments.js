@@ -1,6 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-import REnvWizard from './REnvWizard'
 import EnvUsage from './EnvUsage'
 import EnvList from './EnvList'
 
@@ -26,7 +26,9 @@ const Environments = (props) => {
             </div>
             </div>
             <div className="col-9 text-right">
-            <button className="btn btn-primary" onClick="modalWizard.goToStep(1)" data-toggle="modal" data-target="#wizardModal" data-backdrop="static" data-keyboard="false">Add Environment</button>
+              <Link to="/envadd">
+              <button className="btn btn-primary">Add Environment</button>
+              </Link>
             </div>
           </div>
           <div className="row">
