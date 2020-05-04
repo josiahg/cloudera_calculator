@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import EnvUsage from './EnvUsage'
 import EnvList from './EnvList'
+import EnvCost from './EnvCost'
 
 const Environments = (props) => {
   return (
@@ -62,6 +63,7 @@ const Environments = (props) => {
         </div>
       </div>
     </div>
+    <EnvCost />
     </div>
     </div>      
   )

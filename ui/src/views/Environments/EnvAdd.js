@@ -1,6 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {browserHistory} from 'react-router';
 import axios from 'axios';
 
 class EnvAdd extends React.Component {
