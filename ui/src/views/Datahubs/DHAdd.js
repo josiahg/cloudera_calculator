@@ -10,6 +10,7 @@ class EnvAdd extends React.Component {
       name: '',
       provider: '',
       region: '',
+      template: '',
       hours: '730'
     }
 
@@ -44,25 +45,25 @@ class EnvAdd extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:4000/api/environments")
-    .then(res => res.json())
-    .then(
-      (result, env) => {
-        for(env in result) {
-          this.envs.push(result[env])
-          this.envnames.push(result[env].name)
+    Promise.all([
+      fetch('http://localhost:4000/api/environments'),
+      fetch('http://localhost:4000/api/datahubs/templates')
+    ])
+    .then(([res1, res2]) => {
+      return Promise.all([res1.json(), res2.json()])
+    })
+    .then(([res1, res2], env, template) => {
+        for(env in res1) {
+          this.envs.push(res1[env])
+          this.envnames.push(res1[env].name)
+        }
+        for(template in res2) {
+          this.templates.push(template)
         }
         this.setState({
           isLoaded: true
         });
-      },
-      (error) => {
-        this.setState({
-          isLoaded: true,
-          error
-        });
-      }
-      )
+    });
   }
 
   render() {
@@ -84,13 +85,15 @@ class EnvAdd extends React.Component {
                 <option defaultValue>Choose an Environment</option>
                 {this.envnames.map((env) =>
                   <option value={env.toString()} key={env.toString()}>{env}</option>
-                  )}
+                )}
                 </select>
                 </div>
                 <div className="form-group"><label htmlFor="templateSelect">Template</label>
-                <select name="region" value={this.state.template} onChange={this.onChange}>
+                <select name="template" value={this.state.template} onChange={this.onChange}>
                 <option defaultValue>Choose a Template</option>
-                <option value="opdb-sql">Operational Database with SQL</option>
+                {this.templates.map((template) =>
+                  <option value={template.toString()} key={template.toString()}>{template}</option>
+                )}
                 </select>
                 </div>
                 <div className="form-group">

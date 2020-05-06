@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import DHUsage from './DHUsage';
 import DHList from './DHList';
+import DHCost from './DHCost'
 
 const Datahubs = (props) => {
   return (
@@ -37,6 +38,7 @@ const Datahubs = (props) => {
             <thead>
             <tr>
               <th className="sortable" data-sort="data-name">Name</th>
+              <th className="sortable" data-sort="data-template">Template</th>
               <th className="sortable" data-sort="data-environment">Environment</th>
               <th className="sortable text-center" data-sort="data-status">Provider</th>
               <th className="sortable" data-sort="data-username">Region</th>
@@ -45,7 +47,7 @@ const Datahubs = (props) => {
               <th className="text-center">
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" value="" id="checkAll"/>
-                <label className="form-check-label" for="checkAll"></label>
+                <label className="form-check-label" htmlFor="checkAll"></label>
               </div>
               </th>
             </tr>
@@ -63,6 +65,7 @@ const Datahubs = (props) => {
       </div>
     </div>
   </div>
+  <DHCost />
   </div>
   </div>
   )

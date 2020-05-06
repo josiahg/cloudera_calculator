@@ -1,6 +1,6 @@
 import React from 'react';
 
-class EnvCost extends React.Component {
+class DHCost extends React.Component {
   constructor(props) {
   super(props);
   this.state = {
@@ -11,7 +11,7 @@ class EnvCost extends React.Component {
   }
   
   componentDidMount() {
-  fetch("http://localhost:4000/api/environments/cost")
+  fetch("http://localhost:4000/api/datahubs/cost")
   .then(res => res.json())
   .then(
     (result) => {
@@ -68,4 +68,4 @@ class EnvCost extends React.Component {
   } 
 }
 
-export default EnvCost;
+export default DHCost;

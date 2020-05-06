@@ -42,11 +42,12 @@ class DHList extends React.Component {
     return <tr><td>Loading...</td></tr>
   } else {
     return test_data.map((env, index) => {
-      const { id, name, environment, provider, region, hours } = env
+      const { id, name, environment, template, provider, region, hours } = env
       return (
         <tr id={id}> 
-          <td className="primary data-name"><a href="#">{name}</a></td>
-          <td className="data-env">{environment}</td>    
+          <td className="primary data-name"><a href="#">{name}</a></td> 
+          <td className="data-template">{template}</td>
+          <td className="data-env">{environment}</td>   
           <td className="text-center text-base data-status">
           <i className="icon fa fa-amazon"/>
           <span className="sr-only">{provider}</span>
@@ -61,7 +62,7 @@ class DHList extends React.Component {
             </a>        
             </li>        
             <li className="del-can">          
-            <a href="#" onclick="delEnvRow(event, \''+name+'\')" className="del-can">
+            <a href="#" className="del-can">
             <i className="icon fa fa-trash del-can" data-toggle="tooltip" data-placement="right" title="Delete"></i>
             </a>        
             </li>      
@@ -70,7 +71,7 @@ class DHList extends React.Component {
           <th scope="row" className="text-center">      
           <div className="form-check">
             <input className="form-check-input table-example-check" type="checkbox" value="1" id="row1" />        
-            <label className="form-check-label" for="row1"></label>      
+            <label className="form-check-label" htmlFor="row1"></label>      
           </div>    
           </th>  
         </tr>

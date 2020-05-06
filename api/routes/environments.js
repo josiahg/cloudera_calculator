@@ -28,6 +28,12 @@ dh_templates = {
     { role: 'Master Nodes', instance_type: 'm5.2xlarge', count: 2, hours: 730, infra_cost: 280, cldr_cost: 0 },
     { role: 'Leader Nodes', instance_type: 'm5.2xlarge', count: 1, hours: 730, infra_cost: 280, cldr_cost: 0 },
     { role: 'Worker Nodes', instance_type: 'm5.2xlarge', count: 3, hours: 730, infra_cost: 130, cldr_cost: 0 }
+  ],
+  'Data Engineering': [
+    { role: 'Gateway Nodes', instance_type: 'm5.2xlarge', count: 0, hours: 730, infra_cost: 70, cldr_cost: 0 },
+    { role: 'Master Nodes', instance_type: 'm5.2xlarge', count: 1, hours: 730, infra_cost: 280, cldr_cost: 0 },
+    { role: 'Compute Nodes', instance_type: 'm5.2xlarge', count: 0, hours: 730, infra_cost: 280, cldr_cost: 0 },
+    { role: 'Worker Nodes', instance_type: 'm5.2xlarge', count: 3, hours: 730, infra_cost: 130, cldr_cost: 0 }
   ]
 }
 
@@ -73,6 +79,24 @@ async function routes (fastify, options) {
 
   fastify.get('/api/datahubs/templates', async (request, reply) => {
     return dh_templates
+  })
+
+  fastify.get('/api/datahubs/cost', async (request, reply) => {
+    cldr_cost = 0;
+    infra_cost = 0;
+    total_cost = 0;
+    // for(idx in estimate.environments) {
+    //   env = estimate.environments[idx]
+    //   for(role in env.aws_infra) {
+    //     cldr_cost += env.aws_infra[role].cldr_cost;
+    //   }        
+    //   for(role in env.aws_infra) {
+    //     infra_cost += env.aws_infra[role].infra_cost;
+    //   }
+    // }      
+    total_cost = cldr_cost + infra_cost
+    reply = { total_cost, cldr_cost, infra_cost }
+    return reply
   })
 }
 
