@@ -22,7 +22,7 @@ class EnvAdd extends React.Component {
 
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
-    if(e.target.name == 'environment') {
+    if(e.target.name === 'environment') {
       let selected_env = this.envs.find(o => o.name === e.target.value)
       console.log(selected_env.provider)
       console.log(selected_env.region)
@@ -102,7 +102,7 @@ class EnvAdd extends React.Component {
                 <small id="envNameHelp" className="form-text text-muted">Choose a short descriptive name to identify this DataHub Cluster</small>
                 </div>
                 <div className="form-group">
-                <label for="envInputName">Hours Running / Month</label>
+                <label htmlFor="envInputName">Hours Running / Month</label>
                 <input type="number" className="form-control" name="hours" value={this.state.hours} onChange={this.onChange} placeholder="730" />
                 <small id="envNameHelp" className="form-text text-muted">Enter the number of hours per month this cluster will run.</small>
                 </div>

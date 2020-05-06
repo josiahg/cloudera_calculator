@@ -9,7 +9,7 @@ estimate = {
     //{ id: '2', name: 'demo-aws2', provider: 'AWS', region: 'us-east-1', hours: '730' }
   ],
   'datahubs': [
-    { id: '1', name: 'opdb-demo-aws', type: 'opdb-demo', environment: 'demo-aws', provider: 'AWS', region: 'us-east-1', hours: '730' }
+    { id: '1', name: 'opdb-demo-aws', template: 'Operational Database with SQL', environment: 'demo-aws', provider: 'AWS', region: 'us-east-1', hours: '730' }
   ]
 }
 
