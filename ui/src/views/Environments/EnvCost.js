@@ -42,7 +42,7 @@ class EnvCost extends React.Component {
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">Total</h3>
-                <p>${test_data.total_cost}</p>
+                <p className="h3 text-default"><strong>${test_data.total_cost}</strong></p>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ class EnvCost extends React.Component {
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">Cloudera</h3>
-                <p>${test_data.cldr_cost}</p>
+                <p className="h3 text-default"><strong>${test_data.cldr_cost}</strong></p>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ class EnvCost extends React.Component {
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">AWS</h3>
-                <p>${test_data.infra_cost}</p>
+                <p className="h3 text-default"><strong>${test_data.infra_cost}</strong></p>
               </div>
             </div>
           </div>

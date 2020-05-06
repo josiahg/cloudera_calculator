@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import DHUsage from './DHUsage';
 import DHList from './DHList';
@@ -25,7 +26,9 @@ const Datahubs = (props) => {
           </div>
           </div>
           <div className="col-9 text-right">
-          <button className="btn btn-primary" onClick="modalWizard.goToStep(1)" data-toggle="modal" data-target="#wizardModal" data-backdrop="static" data-keyboard="false">Add DataHub Cluster</button>
+            <Link to="/dhadd">
+              <button className="btn btn-primary">Add DataHub Cluster</button>
+            </Link>
           </div>
         </div>
         <div className="row">
@@ -34,6 +37,7 @@ const Datahubs = (props) => {
             <thead>
             <tr>
               <th className="sortable" data-sort="data-name">Name</th>
+              <th className="sortable" data-sort="data-environment">Environment</th>
               <th className="sortable text-center" data-sort="data-status">Provider</th>
               <th className="sortable" data-sort="data-username">Region</th>
               <th className="sortable" data-sort="data-login">Hours</th>

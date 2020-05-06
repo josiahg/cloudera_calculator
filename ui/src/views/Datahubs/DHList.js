@@ -16,13 +16,13 @@ class DHList extends React.Component {
   // ];
   
   componentDidMount() {
-  fetch("http://localhost:4000/api/environments")
+  fetch("http://localhost:4000/api/datahubs")
   .then(res => res.json())
   .then(
     (result) => {
       this.setState({
         isLoaded: true,
-        test_data: result.environments
+        test_data: result
       });
     },
     (error) => {
@@ -42,10 +42,11 @@ class DHList extends React.Component {
     return <tr><td>Loading...</td></tr>
   } else {
     return test_data.map((env, index) => {
-      const { id, name, provider, region, hours } = env
+      const { id, name, environment, provider, region, hours } = env
       return (
         <tr id={id}> 
-          <td className="primary data-name"><a href="#">{name}</a></td>    
+          <td className="primary data-name"><a href="#">{name}</a></td>
+          <td className="data-env">{environment}</td>    
           <td className="text-center text-base data-status">
           <i className="icon fa fa-amazon"/>
           <span className="sr-only">{provider}</span>

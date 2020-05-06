@@ -22,7 +22,7 @@ class EnvList extends React.Component {
     (result) => {
       this.setState({
         isLoaded: true,
-        test_data: result.environments
+        test_data: result
       });
     },
     (error) => {

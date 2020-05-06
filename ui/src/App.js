@@ -8,6 +8,7 @@ import Dashboard from './views/Dashboard'
 import Environments from './views/Environments/Environments'
 import EnvAdd from './views/Environments/EnvAdd'
 import Datahubs from './views/Datahubs/Datahubs'
+import DHAdd from './views/Datahubs/DHAdd'
 import MLWorkspaces from './views/MLWorkspaces'
 import StorageCal from './views/StorageCal'
 import Warehouses from './views/Warehouses'
@@ -69,6 +70,7 @@ const App = (props) => {
       <Route path="/mlworkspaces" component={MLWorkspaces}/>
       <Route path="/storage" component={StorageCal}/>
       <Route path="/envadd" component={EnvAdd}/>
+      <Route path="/dhadd" component={DHAdd}/>
       <Redirect from="/" to="/dashboard" />          
     </Switch>
     </main>

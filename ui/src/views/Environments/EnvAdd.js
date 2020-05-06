@@ -60,6 +60,11 @@ class EnvAdd extends React.Component {
                 <input type="text" className="form-control" name="name" value={this.state.name} onChange={this.onChange} placeholder="Enter environment name" />
                 <small id="envNameHelp" className="form-text text-muted">Choose a short descriptive name to identify this environment</small>
                 </div>
+                <div className="form-group">
+                <label for="envInputName">Hours Running / Month</label>
+                <input type="number" className="form-control" name="hours" value={this.state.hours} onChange={this.onChange} placeholder="730" />
+                <small id="envNameHelp" className="form-text text-muted">Enter the number of hours per month this environment will run.</small>
+                </div>
                 </form>
                 <br />
                 
